@@ -1,0 +1,12 @@
+[Unit]
+Description=Celery Web Monitoring Tool.
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/celery --broker=redis://localhost:6379/0 --result-backend=redis://localhost:6379/0 flower
+User=mic
+Group=mic
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

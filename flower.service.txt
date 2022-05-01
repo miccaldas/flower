@@ -1,0 +1,12 @@
+● flower.service - Celery Web Monitoring Tool.
+     Loaded: loaded (/usr/lib/systemd/system/flower.service; disabled; vendor preset: disabled)
+     Active: active (running) since Sat 2022-04-30 19:27:07 WEST; 18ms ago
+TriggeredBy: ● flower.timer
+   Main PID: 130346 (celery)
+      Tasks: 1 (limit: 19047)
+     Memory: 3.4M
+        CPU: 12ms
+     CGroup: /system.slice/flower.service
+             └─ 130346 /usr/bin/python /usr/bin/celery --broker=redis://localhost:6379/0 --result-backend=redis://localhost:6379/0 flower
+
+Apr 30 19:27:07 micaldas-host systemd[1]: Started Celery Web Monitoring Tool..
